@@ -1,0 +1,23 @@
+[debug] [2017-11-04T09:54:33.600Z] ----------------------------------------------------------------------
+[debug] [2017-11-04T09:54:33.602Z] Command:       /usr/bin/node /usr/bin/firebase deploy
+[debug] [2017-11-04T09:54:33.603Z] CLI Version:   3.12.0
+[debug] [2017-11-04T09:54:33.603Z] Platform:      linux
+[debug] [2017-11-04T09:54:33.603Z] Node Version:  v8.5.0
+[debug] [2017-11-04T09:54:33.603Z] Time:          Sat Nov 04 2017 15:39:33 GMT+0545 (+0545)
+[debug] [2017-11-04T09:54:33.603Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-11-04T09:54:33.612Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-11-04T09:54:33.612Z] > authorizing via signed-in user
+[debug] [2017-11-04T09:54:33.614Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-11-04T09:54:33.614Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/r9DtvYs8mRfLPPAQX_3QtzFmUDwOTr68RJLqmcZal1A',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sat Nov 04 2017 15:39:33 GMT+0545 (+0545)
+[debug] [2017-11-04T09:54:36.412Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-04T09:54:36.418Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/rn-fire-chat  
+ Sat Nov 04 2017 15:39:36 GMT+0545 (+0545)
+[debug] [2017-11-04T09:54:43.480Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-04T09:54:43.482Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/rn-fire-chat/tokens  
+ Sat Nov 04 2017 15:39:43 GMT+0545 (+0545)
