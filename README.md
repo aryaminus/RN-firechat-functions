@@ -4,7 +4,7 @@
 
 <a href="https://github.com/aryaminus/RN-firechat" target="_blank">RN-firechat</a>
 
-[![RnFireChat demo](https://i.imgur.com/Lae3m7R.gif)](https://youtu.be/XNQ1jgqpX3c)
+[![RnFireChat demo](https://i.imgur.com/DwRsnvc.gif)](https://youtu.be/XNQ1jgqpX3c)
 
 ## Installation
 
@@ -35,9 +35,9 @@ $ firebase deploy --only functions:sendNotification
 **Else**
 To initialize your project:
 
-    Run ```firebase login``` to log in via the browser and authenticate the firebase tool.
+    Run firebase login to log in via the browser and authenticate the firebase tool.
     Go to your Firebase project directory.
-    Run ```firebase init functions```. The tool gives you an option to install dependencies with npm. It is safe to decline if you want to manage dependencies in another way.
+    Run firebase init functions. The tool gives you an option to install dependencies with npm. It is safe to decline if you want to manage dependencies in another way.
 
 After these commands complete successfully, your project structure looks like this:
 ```
@@ -72,7 +72,7 @@ $ firebase deploy --only functions:sendNotification
 ## Additional Links:
 1. <a href="https://firebase.google.com/docs/functions/" target="_blank">Firebase Cloud Functions</a>
 2. <a href="https://firebase.google.com/docs/functions/get-started" target="_blank">Getting started with firebase functions</a>
-3. <a href="https://firebase.google.com/docs/cli/" target="_blank">Cli Docs</a>
+3. <a href="https://firebase.google.com/docs/cli/" target="_blank">CLI Docs</a>
 
 ## Contributing
 
