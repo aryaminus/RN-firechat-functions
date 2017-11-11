@@ -3,11 +3,11 @@ const admin = require("firebase-admin");
 admin.initializeApp(functions.config().firebase);
 
 exports.sendNotification = functions.database
-  .ref("/chat/{uid}/{pushId}")
+  .ref("/chat/{chatid}/{pushId}")
   .onWrite(event => {
-    const message = event.data.current.val();
+    const message = event.data.val();
     const senderUid = message.uid;
-    const receiverUid = event.params.uid;
+    const receiverUid = message.fuid;
 
     const payload = {
       notification: {
@@ -18,19 +18,28 @@ exports.sendNotification = functions.database
     };
 
     const options = {
-        collapseKey: "demo",
-        contentAvailable: true,
-        priority: "high",
-        timeToLive: 60 * 60 * 24
+      collapseKey: "demo",
+      contentAvailable: true,
+      priority: "high",
+      timeToLive: 60 * 60 * 24
     };
 
     return admin
-      .messaging()
-      .sendToDevice(receiverUid, payload)
-      .then(function(response) {
-        console.log("Successfully sent message:", response);
-      })
-      .catch(function(error) {
-        console.log("Error sending message:", error);
+      .database()
+      .ref(`friends/{pushId}`)
+      .once("value")
+      .then(data => {
+        console.log("inside", data.val().notificationKey);
+        if (data.val().uid == receiverUid){
+          return admin
+          .messaging()
+          .sendToDevice(data.val().notificationKey.token, payload)
+          .then(function(response) {
+            console.log("Successfully sent message:", response);
+          })
+          .catch(function(error) {
+            console.log("Error sending message:", error);
+          });
+        }
       });
   });
