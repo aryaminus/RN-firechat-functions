@@ -29,11 +29,11 @@ exports.sendNotification = functions.database
       .ref(`friends/{pushId}`)
       .once("value")
       .then(data => {
-        console.log("inside", data.val().notificationKey);
+        //console.log("inside", data.val().notificationKey);
         if (data.val().uid == receiverUid){
           return admin
           .messaging()
-          .sendToDevice(data.val().notificationKey.token, payload)
+          .sendToDevice(data.val().token, payload)
           .then(function(response) {
             console.log("Successfully sent message:", response);
           })
